@@ -1,0 +1,56 @@
+name: Task
+description: Implementation task or development work item
+title: "[Task] "
+labels: ["type:task"]
+type: Task
+
+body:
+
+  - type: markdown
+    attributes:
+      value: "## Implementation Task"
+
+  - type: input
+    id: parent
+    attributes:
+      label: Related Story / Feature
+      description: Link the related story or feature issue
+      placeholder: "#123"
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which part of MERIT is affected?
+      multiple: true
+      options:
+        - merit_application
+        - merit_assessment
+        - merit_base
+        - merit_dossier
+        - merit_reporting
+        - merit_review
+
+  - type: textarea
+    id: task_description
+    attributes:
+      label: Task Description
+      description: What needs to be implemented or changed?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: When is the task considered complete?
+      placeholder: |
+        - Requirement 1
+        - Requirement 2
+        - Tests pass
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Technical Notes
+      description: Optional implementation notes, links, or design hints

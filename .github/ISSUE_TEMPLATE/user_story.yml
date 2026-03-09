@@ -1,0 +1,39 @@
+name: User Story
+description: Request a feature from the user perspective
+title: "[Story] "
+labels: ["type:story"]
+type: Story
+
+body:
+
+  - type: markdown
+    attributes:
+      value: "Describe the feature from the user perspective."
+
+  - type: textarea
+    id: user_story
+    attributes:
+      label: User Story
+      description: Use the standard format
+      placeholder: |
+        As a [role],
+        I want to [action],
+        so that [benefit].
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Additional explanation
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: When is this feature complete?
+      placeholder: |
+        - Criterion 1
+        - Criterion 2
+        - Criterion 3

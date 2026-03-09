@@ -1,0 +1,67 @@
+name: Technical Feature Proposal
+description: Developer-oriented feature specification
+title: "[Feature]: "
+labels: ["type:feature"]
+type: Feature
+
+body:
+
+  - type: markdown
+    attributes:
+      value: "## MERIT Technical Feature Proposal"
+
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Tool / System Component
+      description: e.g. MERIT portal, review module
+      multiple: true
+      options:
+        - merit_application
+        - merit_assessment
+        - merit_base
+        - merit_dossier
+        - merit_reporting
+        - merit_review
+
+  - type: textarea
+    id: user_story
+    attributes:
+      label: User Need / Problem
+      placeholder: |
+        What problem should be solved?
+        Who benefits?
+    validations:
+      required: true
+
+  - type: textarea
+    id: functional
+    attributes:
+      label: Functional Requirements
+      description: What the system must do
+      placeholder: |
+        - Requirement 1
+        - Requirement 2
+
+  - type: textarea
+    id: technical
+    attributes:
+      label: Technical Requirements
+      description: Architecture, APIs, performance expectations
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: Limitations, compatibility, legal requirements
+
+  - type: textarea
+    id: visuals
+    attributes:
+      label: UI / Data Examples
+      description: Screenshots, diagrams, or example outputs
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Implementation Notes

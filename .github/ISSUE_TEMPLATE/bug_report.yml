@@ -1,0 +1,49 @@
+name: Bug Report
+description: Report a bug
+title: "[Bug] "
+labels: ["type:bug"]
+type: Bug
+
+body:
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected Component
+      options:
+        - merit_application
+        - merit_assessment
+        - merit_base
+        - merit_dossier
+        - merit_reporting
+        - merit_review
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: What is wrong?
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Step 1
+        2. Step 2
+        3. Step 3
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behaviour
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behaviour
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Screenshots
